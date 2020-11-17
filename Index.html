@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Perfil de Usuario</title>
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row bg-dark position-fixed w-100">
+        <div class="row bg-dark position-fixed w-100 menu">
             <ul class="col-12 nav justify-content-center">
                 <li class="nav-item">
                   <a class="nav-link active" href="#">Perfil</a>
@@ -27,19 +29,19 @@
                 <div class="form-horizontal">
                     <div class="col-12">
                         <label for="nombre">Nombre </label> 
-                        <input class="form-control" v-model="nombre">
+                        <input class="form-control" v-model="usuario.nombre">
                     </div>
                     <div class="col-12">
                         <label for="apellido">Apellido</label>
-                        <input class="form-control" v-model="apellido">
+                        <input class="form-control" v-model="usuario.apellido">
                     </div>
                     <div class="col-12">
                         <label for="edad">Edad: </label>
-                        <input class="form-control" v-model="edad">
+                        <input class="form-control" v-model="usuario.edad">
                     </div>
                     <div class="col-12">
                         <label for="nickname">Nickname: </label>
-                        <input class="form-control" v-model="nickname">
+                        <input class="form-control" v-model="usuario.nickname">
                     </div>
                     <div class="col-12 my-2">
                         <button class="btn btn-success" @click="guardar">Salvar</button>
@@ -49,8 +51,8 @@
             <div class="col-sm-12 col-md-8">
                 <hr>
                 <h1>Resumen</h1>
-                <span class="col-4 text-muted">Nombre : {{nombre}}</span>
-                <span class="col-4 text-muted">Apellido: {{apellido}}</span>
+                <span class="col-4 text-muted">Nombre : {{usuario.nombre}}</span>
+                <span class="col-4 text-muted">Apellido: {{usuario.apellido}}</span>
             </div>
             <div class="col-10">
                 <span></span>

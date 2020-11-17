@@ -1,40 +1,38 @@
 const app = new Vue({
     el: '#app',
     data: {
-      nombre: '',
-      apellido: '',
-      edad : 0,
-      nickname : ''
+        usuario : {
+            nombre: '',
+            apellido: '',
+            edad : 0,
+            nickname : ''
+        }
     },
+    // Si existen los datos guardarlos en el obj data
     mounted() {
       if (localStorage.name) {
-        this.nombre = localStorage.name;
+        this.usuario.nombre = localStorage.name;
       }
 
       if(localStorage.apellido){
-        this.apellido = localStorage.apellido;
+        this.usuario.apellido = localStorage.apellido;
       }
 
       if(localStorage.edad){
-        this.edad = localStorage.edad;
+        this.usuario.edad = localStorage.edad;
       }
 
       if(localStorage.nickname){
-        this.nickname = localStorage.nickname;
-      }
-    },
-    watch: {
-      nombre(newName) {
-        localStorage.name = newName;
+        this.usuario.nickname = localStorage.nickname;
       }
     },
     methods: {
-        // Guardar datos en local 
+        // Guardar datos en local con el evento onclick
         guardar(){
-            localStorage.name = this.nombre;
-            localStorage.apellido = this.apellido;
-            localStorage.edad = this.edad;
-            localStorage.nickname = this.nickname;
+            localStorage.name = this.usuario.nombre;
+            localStorage.apellido = this.usuario.apellido;
+            localStorage.edad = this.usuario.edad;
+            localStorage.nickname = this.usuario.nickname;
         }
     }
   });
