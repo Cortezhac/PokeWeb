@@ -33,6 +33,13 @@ const app = new Vue({
             localStorage.apellido = this.usuario.apellido;
             localStorage.edad = this.usuario.edad;
             localStorage.nickname = this.usuario.nickname;
+        },
+        eliminar(){
+          localStorage.clear();
+          this.usuario.nombre = "";
+          this.usuario.apellido = "";
+          this.usuario.edad = 0;
+          this.usuario.nickname = "";
         }
     }
   });

@@ -51,14 +51,38 @@
             <div class="col-sm-12 col-md-8">
                 <hr>
                 <h1>Resumen</h1>
-                <span class="col-4 text-muted">Nombre : {{usuario.nombre}}</span>
-                <span class="col-4 text-muted">Apellido: {{usuario.apellido}}</span>
+                <div class="row justify-content-center">
+                    <span class="col-sm-12 col-md-6 mb-2">Nombre : {{usuario.nombre}}</span>
+                    <span class="col-sm-12 col-md-6 mb-2">Apellido : {{usuario.apellido}}</span>
+                    <span class="col-sm-12 col-md-6 mb-2">Edad : {{usuario.edad}}</span>
+                    <span class="col-sm-12 col-md-6 mb-2">NickName : {{usuario.nickname}}</span>
+                    <button type="buttom" class="col-sm-12 col-lg-6 btn btn-danger" data-toggle="modal" data-target="#ModalEliminar">Eliminar</button>
+                </div>
+                <!-- Modal de confirmacion-->
+                <div class="modal fade" id="ModalEliminar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>¿Desea eliminarlo?</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-danger" @click="eliminar" data-dismiss="modal">Si, de acuerdo</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
             </div>
             <div class="col-10">
                 <span></span>
             </div>
         </div>
-
     </div>
 </body>
 <script src="js/vue.js"></script>
