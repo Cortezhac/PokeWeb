@@ -13,19 +13,19 @@
         <div class="row bg-dark position-fixed w-100 menu">
             <ul class="col-12 nav justify-content-center">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Perfil</a>
+                  <a class="nav-link active" href="#perfil">Perfil</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Equipo</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Resumen</a>
+                  <a class="nav-link" href="#resumen">Resumen</a>
                 </li>
               </ul>
         </div>
         <div id="app" class="row justify-content-center">
             <div class="col-sm-12 col-md-8 mt-5">
-                <h1 class="h2">Perfil Usuario</h1>
+                <h1 id="perfil" class="h2">Perfil Usuario</h1>
                 <div class="form-horizontal">
                     <div class="col-12">
                         <label for="nombre">Nombre </label> 
@@ -50,7 +50,7 @@
             </div>
             <div class="col-sm-12 col-md-8">
                 <hr>
-                <h1>Resumen</h1>
+                <h1 id="resumen">Resumen</h1>
                 <div class="row justify-content-center">
                     <span class="col-sm-12 col-md-6 mb-2">Nombre : {{usuario.nombre}}</span>
                     <span class="col-sm-12 col-md-6 mb-2">Apellido : {{usuario.apellido}}</span>
